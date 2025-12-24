@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "pnpm run build:web",
+  "devCommand": "pnpm run dev:web",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "outputDirectory": "public/web",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./packages/web/buildingai-ui"
+}
