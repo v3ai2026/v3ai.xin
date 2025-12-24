@@ -59,6 +59,16 @@ After the project has fully started, open your browser and visit
 For other deployment methods, see our
 [Deployment Guide](https://www.buildingai.cc/docs/introduction/install).
 
+## Automatic Deployment to Vercel
+
+This repository is configured for automatic deployment to Vercel. When you push code to the `main` or
+`master` branch, GitHub Actions will automatically build and deploy the project.
+
+**Setup Instructions:**
+1. See [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) for detailed configuration steps
+2. Configure required GitHub Secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`
+3. Push to `main` or `master` branch to trigger deployment
+
 ## Key Features
 
 - **AI Conversations**: Conversational AI and text generation powered by large language models, with

@@ -53,6 +53,15 @@ docker compose up -d
 
 其他部署方式请参阅我们的 [《部署文档》](https://www.buildingai.cc/docs/introduction/install)
 
+## Vercel 自动部署
+
+本仓库已配置自动部署到 Vercel。当你推送代码到 `main` 或 `master` 分支时，GitHub Actions 会自动构建并部署项目。
+
+**配置说明：**
+1. 详细配置步骤请查看 [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md)
+2. 需要配置 GitHub Secrets：`VERCEL_TOKEN`、`VERCEL_ORG_ID`、`VERCEL_PROJECT_ID`
+3. 推送代码到 `main` 或 `master` 分支即可触发自动部署
+
 ## 主要功能
 
 - **AI对话**： 基于 LLM 模型进行对话、文本生成，支持多模态模型调用
