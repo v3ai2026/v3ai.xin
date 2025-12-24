@@ -1,0 +1,7 @@
+{
+    "extends": "@buildingai/typescript-config/base.json",
+    "compilerOptions": {
+        "strict": false
+    },
+    "include": ["src/**/*.ts"]
+}

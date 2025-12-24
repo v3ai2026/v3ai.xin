@@ -1,0 +1,114 @@
+packages:
+  - packages/*
+  - extensions/*
+  - packages/web/*
+  - packages/@buildingai/*
+  - packages/web/@buildingai/*
+
+catalog:
+  axios: ^1.13.2
+  callsites: ^4.2.0
+  cli-table3: 0.6.5
+  dotenv: ^17.2.3
+
+catalogs:
+  api:
+    '@nestjs/axios': ^4.0.1
+    '@nestjs/bullmq': ^11.0.4
+    '@nestjs/cache-manager': ^3.0.1
+    '@nestjs/cli': ^11.0.10
+    '@nestjs/common': ^11.1.8
+    '@nestjs/config': ^4.0.2
+    '@nestjs/core': ^11.1.8
+    '@nestjs/event-emitter': ^3.0.1
+    '@nestjs/jwt': ^11.0.1
+    '@nestjs/mapped-types': ^2.1.0
+    '@nestjs/platform-express': ^11.1.8
+    '@nestjs/schedule': ^6.0.1
+    '@nestjs/schematics': ^11.0.9
+    '@nestjs/serve-static': ^5.0.4
+    '@nestjs/terminus': ^11.0.0
+    '@nestjs/testing': ^11.1.8
+    '@nestjs/typeorm': ^11.0.0
+    '@types/express': ^5.0.5
+    bullmq: ^5.63.0
+    class-transformer: ^0.5.1
+    class-validator: ^0.14.2
+    cron: 4.3.3
+    express: ^5.1.0
+    typeorm: 0.3.27
+    typeorm-naming-strategies: ^4.1.0
+  dev:
+    '@tsconfig/node22': ^22.0.2
+    '@types/node': ^24.10.0
+    eslint: ^9.39.1
+    eslint-plugin-format: ^1.0.2
+    eslint-plugin-vue: ^10.5.1
+    prettier: ^3.6.2
+    prettier-plugin-tailwindcss: ^0.6.14
+    typescript: 5.9.2
+    typescript-eslint: ^8.46.3
+    vite: ^7.1.6
+    vite-plugin-eslint2: ^5.0.4
+    vue-eslint-parser: ^10.2.0
+    vue-tsc: ^2.2.12
+  web:
+    '@internationalized/date': ^3.10.0
+    '@nuxt/devtools': ^2.7.0
+    '@nuxt/eslint': ^1.10.0
+    '@nuxt/image': ^1.11.0
+    '@nuxt/kit': ^4.2.0
+    '@nuxt/schema': ^4.1.2
+    '@nuxt/ui': ^3.3.7
+    '@nuxtjs/color-mode': ^3.5.2
+    '@nuxtjs/i18n': ^10.2.0
+    '@pinia/nuxt': ^0.11.3
+    '@shikijs/langs': ^3.13.0
+    '@shikijs/markdown-it': ^3.12.2
+    '@tailwindcss/vite': ^4.1.17
+    '@tiptap/extension-color': ^2.27.1
+    '@tiptap/extension-highlight': ^2.27.1
+    '@tiptap/extension-image': ^2.27.1
+    '@tiptap/extension-link': ^2.27.1
+    '@tiptap/extension-list-item': ^2.27.1
+    '@tiptap/extension-placeholder': ^2.27.1
+    '@tiptap/extension-text-style': ^2.27.1
+    '@tiptap/extension-underline': ^2.27.1
+    '@tiptap/starter-kit': ^2.27.1
+    '@tiptap/vue-3': ^2.27.1
+    '@vite-pwa/nuxt': ^0.10.8
+    '@vueuse/core': ^13.9.0
+    '@vueuse/motion': ^3.0.3
+    '@vueuse/nuxt': ^12.8.2
+    clsx: ^2.1.1
+    echarts: ^5.6.0
+    mermaid: ^11.12.1
+    motion-v: ^1.7.4
+    nuxt: 4.1.2
+    nuxt-svgo: ^4.2.6
+    panzoom: ^9.4.3
+    pinia: ^3.0.4
+    reka-ui: ^2.6.0
+    sass: 1.78.0
+    stream-markdown: ^0.0.8
+    tailwind-merge: ^3.3.1
+    tailwindcss: ^4.1.17
+    tailwindcss-animate: ^1.0.7
+    tiptap-markdown: ^0.8.10
+    vue: ^3.5.24
+    vue-dompurify-html: ^5.3.0
+    vue-i18n: ^11.1.12
+    vue-renderer-markdown: 0.0.61-beta.7
+    vue-router: ^4.6.3
+    vuedraggable: ^4.1.0
+    yup: ^1.7.1
+
+onlyBuiltDependencies:
+  - '@nestjs/core'
+  - '@parcel/watcher'
+  - '@swc/core'
+  - '@tailwindcss/oxide'
+  - esbuild
+  - msgpackr-extract
+  - unrs-resolver
+  - vue-demi

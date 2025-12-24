@@ -1,0 +1,28 @@
+{
+    "name": "buildingai",
+    "version": "0.0.0",
+    "private": true,
+    "license": "MIT",
+    "type": "module",
+    "bin": {
+        "buildingai": "./bin/cli.js",
+        "buildingai-setup": "./bin/setup.js",
+        "buildingai-predeploy": "./bin/predeploy.js"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "start": "cross-env NODE_ENV=production node ./bin/setup.js",
+        "predeploy": "cross-env NODE_ENV=production node ./bin/predeploy.js"
+    },
+    "dependencies": {
+        "@buildingai/api": "workspace:*",
+        "fs-extra": "^11.3.2",
+        "commander": "^12.0.0"
+    },
+    "devDependencies": {
+        "@buildingai/eslint-config": "workspace:*",
+        "@buildingai/typescript-config": "workspace:*"
+    }
+}

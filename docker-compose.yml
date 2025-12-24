@@ -1,0 +1,161 @@
+name: buildingai
+
+x-resource-config: &resource-config
+    deploy:
+        resources:
+            limits:
+                memory: ${DOCKER_MEMORY_LIMIT:-3584M}
+                cpus: "${DOCKER_CPU_LIMIT:-1.0}"
+            reservations:
+                memory: ${DOCKER_MEMORY_RESERVATION:-512M}
+
+services:
+    redis:
+        image: ccr.ccs.tencentyun.com/buildingai/redis:8.2.2
+        container_name: buildingai-redis${DOCKER_CONTAINER_SUFFIX:-}
+        restart: always
+        environment:
+            TZ: Asia/Shanghai
+            REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+            QUICK_START_MODE: ${QUICK_START_MODE:-false}
+        ports:
+            - "${REDIS_EXTERNAL_PORT:-}${REDIS_EXTERNAL_PORT:+:}6379"
+        volumes:
+            - ./docker/data/redis:/data
+        networks:
+            - buildingai-network
+        <<: *resource-config
+        healthcheck:
+            test: ["CMD-SHELL", "redis-cli -a $$REDIS_PASSWORD ping"]
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+    postgres:
+        image: ccr.ccs.tencentyun.com/buildingai/postgres:17.6
+        container_name: buildingai-postgres${DOCKER_CONTAINER_SUFFIX:-}
+        restart: always
+        environment:
+            TZ: Asia/Shanghai
+            POSTGRES_USER: ${DB_USERNAME:-postgres}
+            POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+            POSTGRES_DB: ${DB_DATABASE:-buildingai}
+        ports:
+            - "${POSTGRES_EXTERNAL_PORT:-}${POSTGRES_EXTERNAL_PORT:+:}5432"
+        volumes:
+            - ./docker/data/postgres/postgres_data:/var/lib/postgresql/data
+        networks:
+            - buildingai-network
+        <<: *resource-config
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-postgres}"]
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+    nodejs:
+        image: ccr.ccs.tencentyun.com/buildingai/node:22.20.0
+        container_name: buildingai-nodejs${DOCKER_CONTAINER_SUFFIX:-}
+        restart: on-failure:3
+        working_dir: /buildingai
+        volumes:
+            - ./:/buildingai
+            - /buildingai/node_modules
+            - /buildingai/packages/api/node_modules
+            - /buildingai/packages/cli/node_modules
+            - /buildingai/packages/core/node_modules
+            - /buildingai/packages/web/buildingai-ui/node_modules
+            - /buildingai/packages/web/@buildingai/designer/node_modules
+            - /buildingai/packages/web/@buildingai/hooks/node_modules
+            - /buildingai/packages/web/@buildingai/http/node_modules
+            - /buildingai/packages/web/@buildingai/i18n-config/node_modules
+            - /buildingai/packages/web/@buildingai/layouts/node_modules
+            - /buildingai/packages/web/@buildingai/nuxt/node_modules
+            - /buildingai/packages/web/@buildingai/service/node_modules
+            - /buildingai/packages/web/@buildingai/stores/node_modules
+            - /buildingai/packages/web/@buildingai/storybook/node_modules
+            - /buildingai/packages/web/@buildingai/ui/node_modules
+            - /buildingai/packages/web/@buildingai/web-config/node_modules
+            - /buildingai/packages/@buildingai/ai-sdk/node_modules
+            - /buildingai/packages/@buildingai/base/node_modules
+            - /buildingai/packages/@buildingai/cache/node_modules
+            - /buildingai/packages/@buildingai/config/node_modules
+            - /buildingai/packages/@buildingai/constants/node_modules
+            - /buildingai/packages/@buildingai/db/node_modules
+            - /buildingai/packages/@buildingai/decorators/node_modules
+            - /buildingai/packages/@buildingai/dict/node_modules
+            - /buildingai/packages/@buildingai/di/node_modules
+            - /buildingai/packages/@buildingai/dto/node_modules
+            - /buildingai/packages/@buildingai/errors/node_modules
+            - /buildingai/packages/@buildingai/eslint-config/node_modules
+            - /buildingai/packages/@buildingai/extension-sdk/node_modules
+            - /buildingai/packages/@buildingai/logger/node_modules
+            - /buildingai/packages/@buildingai/pipe/node_modules
+            - /buildingai/packages/@buildingai/types/node_modules
+            - /buildingai/packages/@buildingai/typescript-config/node_modules
+            - /buildingai/packages/@buildingai/upgrade/node_modules
+            - /buildingai/packages/@buildingai/utils/node_modules
+            - /buildingai/packages/@buildingai/wechat-sdk/node_modules
+        ports:
+            - "${SERVER_PORT:-4090}:${SERVER_PORT:-4090}"
+        environment:
+            TZ: Asia/Shanghai
+            SERVER_PORT: ${SERVER_PORT:-4090}
+            QUICK_START_MODE: ${QUICK_START_MODE:-false}
+            NPM_REGISTRY_URL: ${NPM_REGISTRY_URL:-}
+            DB_USERNAME: ${DB_USERNAME:-postgres}
+            DB_PASSWORD: ${DB_PASSWORD:-postgres}
+            DB_DATABASE: ${DB_DATABASE:-buildingai}
+            DB_HOST: postgres
+            DB_PORT: 5432
+            REDIS_HOST: redis
+            REDIS_PORT: 6379
+            REDIS_PASSWORD: ${REDIS_PASSWORD:-}
+        command: |
+            sh -c '
+            set -e
+            echo "🚀 Starting BuildingAI container..."
+
+            if [ -n "$NPM_REGISTRY_URL" ]; then
+            echo "🔧 Using custom registry: $NPM_REGISTRY_URL"
+            if command -v npm >/dev/null 2>&1; then
+                npm config set registry "$NPM_REGISTRY_URL"
+            fi
+            if command -v pnpm >/dev/null 2>&1; then
+                pnpm config set registry "$NPM_REGISTRY_URL"
+            fi
+            else
+            echo "⚠️ NPM_REGISTRY_URL not set, using default registry"
+            fi
+
+            if ! command -v pnpm >/dev/null 2>&1; then
+            echo "📦 Installing pnpm..."
+            npm install -g pnpm
+            npm install -g pm2
+
+            if [ -n "$NPM_REGISTRY_URL" ]; then
+                pnpm config set registry "$NPM_REGISTRY_URL"
+            fi
+            fi
+
+            echo "🎯 Starting BuildingAI..."
+            exec pnpm start --no-daemon
+            '
+        networks:
+            - buildingai-network
+        <<: *resource-config
+        depends_on:
+            redis:
+                condition: service_healthy
+            postgres:
+                condition: service_healthy
+        healthcheck:
+            test: ["CMD-SHELL", "curl -f http://localhost:${SERVER_PORT:-4090}/consoleapi/health || pnpm pm2 describe ${PM2_APP_NAME:-buildingai-api} | grep -q 'online' || exit 1"]
+            interval: 30s
+            timeout: 10s
+            retries: 3
+            start_period: 600s
+
+networks:
+    buildingai-network:
+        driver: bridge

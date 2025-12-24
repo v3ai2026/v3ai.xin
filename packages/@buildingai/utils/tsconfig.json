@@ -1,0 +1,15 @@
+{
+    "extends": "@buildingai/typescript-config/base.json",
+    "compilerOptions": {},
+    "paths": {
+        "@buildingai/constants/*": ["../constants/src/*"]
+    },
+    "references": [
+        {
+            "path": "../constants/tsconfig.build.json"
+        },
+        {
+            "path": "../../core/tsconfig.build.json"
+        }
+    ]
+}

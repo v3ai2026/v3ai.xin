@@ -1,0 +1,10 @@
+{
+    "extends": [
+        "../../buildingai-ui/.nuxt/tsconfig.json"
+    ],
+    "include": [
+        "src/**/*",
+        "../../buildingai-ui/.nuxt/types/imports.d.ts",
+        "env.d.ts"
+    ]
+}

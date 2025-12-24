@@ -1,0 +1,46 @@
+{
+    "name": "@buildingai/types",
+    "version": "0.0.0",
+    "private": true,
+    "license": "MIT",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist/**/*"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        },
+        "./*": {
+            "types": "./dist/*.d.ts",
+            "import": "./dist/*.mjs",
+            "require": "./dist/*.js"
+        }
+    },
+    "scripts": {
+        "clean": "rimraf dist .turbo dist/build.tsbuildinfo",
+        "check-types": "tsc --noEmit",
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "format": "biome format --write .",
+        "format:check": "biome ci .",
+        "lint": "eslint . --quiet",
+        "lint:fix": "eslint . --fix",
+        "watch": "tsup --watch",
+        "test": "jest",
+        "test:dev": "jest --watch"
+    },
+    "dependencies": {
+        "callsites": "^4.2.0",
+        "@buildingai/constants": "workspace:*"
+    },
+    "devDependencies": {
+        "@buildingai/eslint-config": "workspace:*",
+        "@buildingai/typescript-config": "workspace:*",
+        "ofetch": "^1.4.1"
+    }
+}

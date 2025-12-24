@@ -1,0 +1,1 @@
+function i(t){if(!t)return"";if(typeof t=="string")return t;if(Array.isArray(t)){const e=[];for(const r of t)r.text&&e.push(r.text),r.type==="text"&&r.text&&e.push(r.text);return e.join(" ").trim()}return""}export{i as e};

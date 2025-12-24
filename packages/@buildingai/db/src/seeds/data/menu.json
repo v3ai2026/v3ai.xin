@@ -1,0 +1,1461 @@
+[
+    {
+        "name": "console-menu.dashboard",
+        "code": "dashboard",
+        "path": "dashboard",
+        "icon": "i-lucide-chart-line",
+        "component": "/console/dashboard",
+        "permissionCode": "",
+        "sort": 0,
+        "isHidden": 0,
+        "type": 2,
+        "sourceType": 1
+    },
+    {
+        "name": "console-menu.workspace",
+        "code": "workspace",
+        "path": "",
+        "icon": "",
+        "component": "",
+        "sort": 1,
+        "isHidden": 0,
+        "type": 0,
+        "sourceType": 1,
+        "children": [
+            {
+                "name": "console-menu.agent.title",
+                "code": "ai-agent",
+                "path": "agent",
+                "icon": "i-lucide-bot",
+                "component": "/console/ai/agent/list",
+                "permissionCode": "ai-agent:list",
+                "sort": 100,
+                "isHidden": 0,
+                "type": 2,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.agent.configuration",
+                        "code": "ai-agent-configuration",
+                        "path": ":id/configuration",
+                        "icon": "",
+                        "component": "/console/ai/agent/[id]/configuration",
+                        "permissionCode": "ai-agent:detail",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-menu.common.actions.update",
+                                "code": "ai-agent-configuration-update",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-agent:update",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.agent.publish",
+                        "code": "ai-agent-publish",
+                        "path": ":id/publish",
+                        "icon": "",
+                        "component": "/console/ai/agent/[id]/publish",
+                        "permissionCode": "ai-agent:publish",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.agent.logs",
+                        "code": "ai-agent-logs",
+                        "path": ":id/logs",
+                        "icon": "",
+                        "component": "/console/ai/agent/[id]/logs",
+                        "permissionCode": "ai-agent-chat-record:list",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-menu.agent.annotations.create",
+                                "code": "ai-agent-logs-annotations-create",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-agent-annotations:create",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-menu.agent.annotations.update",
+                                "code": "ai-agent-logs-annotations-update",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-agent-annotations:update",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-menu.agent.annotations.delete",
+                                "code": "ai-agent-logs-annotations-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-agent-annotations:delete",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-menu.agent.annotations.review",
+                                "code": "ai-agent-logs-annotations-review",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-agent-annotations:review",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.agent.dashboard",
+                        "code": "ai-agent-dashboard",
+                        "path": ":id/dashboard",
+                        "icon": "",
+                        "component": "/console/ai/agent/[id]/dashboard",
+                        "permissionCode": "ai-agent:statistics",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.datasets.title",
+                "code": "ai-datasets",
+                "path": "datasets",
+                "icon": "i-lucide-file-search",
+                "component": "/console/ai/datasets/list",
+                "permissionCode": "ai-datasets:list",
+                "sort": 200,
+                "isHidden": 0,
+                "type": 2,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.datasets.documents.title",
+                        "code": "ai-datasets-documents",
+                        "path": ":id/documents",
+                        "icon": "",
+                        "component": "/console/ai/datasets/[id]/documents/index",
+                        "permissionCode": "ai-datasets-documents:list",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-menu.common.actions.delete",
+                                "code": "ai-datasets-documents-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-datasets-documents:delete",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-menu.common.actions.retry",
+                                "code": "ai-datasets-documents-retry",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-datasets-documents:retry",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-menu.common.actions.status",
+                                "code": "ai-datasets-documents-status",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-datasets-documents:set-enabled",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-menu.common.actions.rename",
+                                "code": "ai-datasets-documents-rename",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-datasets-documents:rename",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.datasets.create",
+                        "code": "ai-datasets-create",
+                        "path": "create",
+                        "icon": "",
+                        "component": "/console/ai/datasets/create",
+                        "permissionCode": "ai-datasets:create",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.datasets.test",
+                        "code": "ai-datasets-test",
+                        "path": ":id/test",
+                        "icon": "",
+                        "component": "/console/ai/datasets/[id]/test",
+                        "permissionCode": "ai-datasets:retrieval-test",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.datasets.members",
+                        "code": "ai-datasets-members",
+                        "path": ":id/members",
+                        "icon": "",
+                        "component": "/console/ai/datasets/[id]/members",
+                        "permissionCode": "ai-datasets-team-members:list",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.datasets.settings",
+                        "code": "ai-datasets-settings",
+                        "path": ":id/settings",
+                        "icon": "",
+                        "component": "/console/ai/datasets/[id]/settings",
+                        "permissionCode": "ai-datasets:update",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.datasets.documents.create",
+                        "code": "ai-datasets-documents-create",
+                        "path": ":id/documents/create",
+                        "icon": "",
+                        "component": "/console/ai/datasets/[id]/documents/create",
+                        "permissionCode": "ai-datasets-documents:create",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.datasets.documents.segments",
+                        "code": "ai-datasets-documents-segments",
+                        "path": ":id/documents/segments",
+                        "icon": "",
+                        "component": "/console/ai/datasets/[id]/documents/segments",
+                        "permissionCode": "ai-datasets-segments:list",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.datasets.delete",
+                        "code": "ai-datasets-delete",
+                        "path": "",
+                        "icon": "",
+                        "component": "",
+                        "permissionCode": "ai-datasets:delete",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 3,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.datasets.retry",
+                        "code": "ai-datasets-retry",
+                        "path": "",
+                        "icon": "",
+                        "component": "",
+                        "permissionCode": "ai-datasets:retry",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 3,
+                        "sourceType": 1
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.mcpServer",
+                "code": "ai-config-mcp-server",
+                "path": "ai_config/mcp",
+                "icon": "i-lucide-wrench",
+                "component": "/console/ai/mcp/list",
+                "permissionCode": "ai-mcp-servers:list",
+                "sort": 300,
+                "isHidden": 0,
+                "type": 2,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-common.add",
+                        "code": "ai-mcp-server-create",
+                        "path": "",
+                        "icon": "",
+                        "component": "",
+                        "permissionCode": "ai-mcp-servers:create",
+                        "sort": 10,
+                        "isHidden": 0,
+                        "type": 3,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-common.edit",
+                        "code": "ai-mcp-server-update",
+                        "path": "",
+                        "icon": "",
+                        "component": "",
+                        "permissionCode": "ai-mcp-servers:update",
+                        "sort": 10,
+                        "isHidden": 0,
+                        "type": 3,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-common.delete",
+                        "code": "ai-mcp-server-delete",
+                        "path": "",
+                        "icon": "",
+                        "component": "",
+                        "permissionCode": "ai-mcp-servers:delete",
+                        "sort": 10,
+                        "isHidden": 0,
+                        "type": 3,
+                        "sourceType": 1
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.providers.title",
+                "code": "ai-config-provide",
+                "path": "ai_config/provide",
+                "icon": "i-lucide-brain-circuit",
+                "component": "/console/ai/provider/list",
+                "permissionCode": "ai-providers:list",
+                "sort": 400,
+                "isHidden": 0,
+                "type": 2,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-common.add",
+                        "code": "ai-config-provide-add",
+                        "path": "",
+                        "icon": "",
+                        "component": "",
+                        "permissionCode": "ai-providers:create",
+                        "sort": 10,
+                        "isHidden": 0,
+                        "type": 3,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-common.edit",
+                        "code": "ai-config-provide-edit",
+                        "path": "",
+                        "icon": "",
+                        "component": "",
+                        "permissionCode": "ai-providers:update",
+                        "sort": 10,
+                        "isHidden": 0,
+                        "type": 3,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-common.delete",
+                        "code": "ai-config-provide-delete",
+                        "path": "",
+                        "icon": "",
+                        "component": "",
+                        "permissionCode": "ai-providers:delete",
+                        "sort": 10,
+                        "isHidden": 0,
+                        "type": 3,
+                        "sourceType": 1
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.apiKeyManage.title",
+                "code": "api-key-manage",
+                "path": "api-key-manage",
+                "icon": "i-lucide-key-round",
+                "component": "",
+                "sort": 500,
+                "isHidden": 0,
+                "type": 1,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.apiKeyManage.apiKeyTemplate",
+                        "code": "api-key-type",
+                        "path": "api-key-type",
+                        "icon": "",
+                        "component": "/console/ai/secret/type",
+                        "permissionCode": "secret-templates:list",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.create",
+                                "code": "api-key-type-create",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret-templates:create",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.update",
+                                "code": "api-key-type-update",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret-templates:update",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.delete",
+                                "code": "api-key-type-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret-templates:delete",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.batchDelete",
+                                "code": "api-key-type-batch-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret-templates:batch-delete",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.import",
+                                "code": "api-key-type-import",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret-templates:import-json",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.toggleStatus",
+                                "code": "api-key-type-toggle-enabled",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret-templates:toggle-enabled",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.check",
+                                "code": "api-key-type-detail",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret-templates:detail",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.apiKeyManage.apiKeyList",
+                        "code": "api-key-list",
+                        "path": "apiKeyList",
+                        "icon": "",
+                        "component": "/console/ai/secret/list",
+                        "permissionCode": "secret:list",
+                        "sort": 10,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.create",
+                                "code": "api-key-list-create",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret:create",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.update",
+                                "code": "api-key-list-update",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret:update",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.delete",
+                                "code": "api-key-list-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret:delete",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.batchDelete",
+                                "code": "api-key-list-batch-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret:batch-delete",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.check",
+                                "code": "api-key-list-detail",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret:detail",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.manage",
+                                "code": "api-key-list-detail-full",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret:detail-full",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.updateStatus",
+                                "code": "api-key-list-update-status",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "secret:update-status",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.plugin",
+                "path": "plugins",
+                "icon": "i-lucide-store",
+                "component": "",
+                "sort": 550,
+                "isHidden": 0,
+                "type": 1,
+                "code": "plugin-manage",
+                "children": [
+                    {
+                        "name": "console-menu.pluginManage",
+                        "path": "manage",
+                        "icon": "",
+                        "component": "/console/plugins/manage/list",
+                        "permissionCode": "extensions:list",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "code": "plugin-my-plugins"
+                    },
+                    {
+                        "name": "console-menu.pluginProfiles",
+                        "path": "secret",
+                        "icon": "",
+                        "component": "/console/plugins/profiles/index",
+                        "permissionCode": "extensions:get-platform-secret",
+                        "sort": 5,
+                        "isHidden": 0,
+                        "type": 2,
+                        "code": "plugin-profiles"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "console-menu.system",
+        "code": "system-manage",
+        "path": "",
+        "icon": "",
+        "component": "",
+        "sort": 2,
+        "isHidden": 0,
+        "type": 0,
+        "sourceType": 1,
+        "children": [
+            {
+                "name": "console-menu.aiConversation.title",
+                "code": "conversation",
+                "path": "conversation",
+                "icon": "i-lucide-message-square-diff",
+                "component": "",
+                "sort": 500,
+                "isHidden": 0,
+                "type": 1,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.aiConversation.aiChat",
+                        "code": "conversation-ai-conversation",
+                        "path": "ai-conversation",
+                        "icon": "",
+                        "component": "/console/ai/chat/list",
+                        "permissionCode": "ai-conversations:list",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.delete",
+                                "code": "conversation-ai-conversation-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-conversations:delete",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.check",
+                                "code": "conversation-ai-conversation-view",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-conversations:detail",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.aiConversation.chatConfig",
+                        "code": "conversation-config",
+                        "path": "config",
+                        "icon": "",
+                        "component": "/console/ai/chat/setting",
+                        "permissionCode": "ai-conversations:get-config",
+                        "sort": 10,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.save",
+                                "code": "conversation-config-save",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "ai-conversations:update-config",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.userManagement.title",
+                "code": "user",
+                "path": "user",
+                "icon": "i-lucide-users",
+                "component": "",
+                "sort": 600,
+                "isHidden": 0,
+                "type": 1,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.userManagement.userList",
+                        "code": "user-list",
+                        "path": "list",
+                        "icon": "",
+                        "component": "/console/user/list",
+                        "permissionCode": "users:list",
+                        "sort": 10,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.create",
+                                "code": "user-list-create",
+                                "path": "create",
+                                "icon": "",
+                                "component": "/console/user/add",
+                                "permissionCode": "users:create",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 2,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.edit",
+                                "code": "user-list-update",
+                                "path": "update",
+                                "icon": "",
+                                "component": "/console/user/edit",
+                                "permissionCode": "users:update",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 2,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.delete",
+                                "code": "user-list-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "users:delete",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.userManagement.userRecharge",
+                        "code": "user-user-recharge",
+                        "path": "user-recharge",
+                        "icon": "",
+                        "component": "/console/user/user-recharge/index",
+                        "permissionCode": "recharge-config:getConfig",
+                        "sort": 100,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.save",
+                                "code": "user-user-recharge-save",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "recharge-config:setConfig",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 2,
+                                "sourceType": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.membershipManagement.title",
+                "code": "membership",
+                "path": "membership",
+                "icon": "i-lucide-crown",
+                "component": "",
+                "sort": 650,
+                "isHidden": 0,
+                "type": 1,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.membershipManagement.levelsList",
+                        "code": "levels-list",
+                        "path": "levels",
+                        "icon": "",
+                        "component": "/console/membership/levels/list",
+                        "permissionCode": "levels:list",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.edit",
+                                "code": "levels-list-update",
+                                "path": "levels/edit",
+                                "icon": "",
+                                "component": "/console/membership/levels/edit",
+                                "permissionCode": "levels:update",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 2,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.add",
+                                "code": "levels-list-add",
+                                "path": "levels/add",
+                                "icon": "",
+                                "component": "/console/membership/levels/add",
+                                "permissionCode": "levels:create",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 2,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.membershipManagement.plansList",
+                        "code": "plans-list",
+                        "path": "plans",
+                        "icon": "",
+                        "component": "/console/membership/plans/list",
+                        "permissionCode": "plans:list",
+                        "sort": 1,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.edit",
+                                "code": "plans-list-update",
+                                "path": "plans/edit",
+                                "icon": "",
+                                "component": "/console/membership/plans/edit",
+                                "permissionCode": "plans:update",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 2,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.add",
+                                "code": "plans-list-add",
+                                "path": "plans/add",
+                                "icon": "",
+                                "component": "/console/membership/plans/add",
+                                "permissionCode": "plans:create",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 2,
+                                "sourceType": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.financial.orderManagement",
+                "code": null,
+                "path": "order",
+                "icon": "i-lucide-clipboard-list",
+                "component": "",
+                "sort": 700,
+                "isHidden": 0,
+                "type": 1,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.financial.orderList",
+                        "code": "order",
+                        "path": "order-recharge",
+                        "icon": "",
+                        "component": "/console/order/order-recharge",
+                        "permissionCode": "recharge-order:list",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.financial.orderMembership",
+                        "code": "membership-order",
+                        "path": "order-membership",
+                        "icon": "",
+                        "component": "/console/order/order-membership",
+                        "permissionCode": "membership-order:list",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.diyCenter.title",
+                "code": "diy-center",
+                "path": "decorate",
+                "icon": "i-lucide-paint-roller",
+                "component": "",
+                "sort": 400,
+                "isHidden": 0,
+                "type": 1,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.diyCenter.microPage",
+                        "code": "diy-micropage",
+                        "path": "micropage",
+                        "icon": "",
+                        "component": "/console/decorate/micropage/list",
+                        "permissionCode": "decorate-micropage:list",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.check",
+                                "code": "diy-design",
+                                "path": "design",
+                                "icon": "",
+                                "component": "/console/decorate/design/web",
+                                "permissionCode": "decorate-micropage:detail",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 2,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.check",
+                                "code": "diy-design-view",
+                                "path": "preview",
+                                "icon": "",
+                                "component": "/console/decorate/design/view",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 2,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.add",
+                                "code": "diy-create",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "decorate-micropage:create",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.edit",
+                                "code": "diy-edit",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "decorate-micropage:update",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.delete",
+                                "code": "diy-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "decorate-micropage:delete",
+                                "sort": 0,
+                                "isHidden": 1,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.diyCenter.layout",
+                        "code": "diy-layout",
+                        "path": "layout",
+                        "icon": "",
+                        "component": "/console/decorate/layout/index",
+                        "permissionCode": "decorate-page:get-layout",
+                        "sort": 1,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.diyCenter.appCenter",
+                        "code": "apps-center",
+                        "path": "apps",
+                        "icon": "",
+                        "component": "/console/decorate/apps/list",
+                        "permissionCode": "extensions:list",
+                        "sort": 2,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.systemSettings.channelManagement",
+                "code": "channel-management",
+                "path": "channel",
+                "icon": "i-lucide-network",
+                "component": "",
+                "sort": 900,
+                "isHidden": 0,
+                "type": 1,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.systemSettings.wechatOaConfig",
+                        "code": "channel-wechat-oa",
+                        "path": "wechat-oa",
+                        "icon": "",
+                        "component": "/console/channel/wechatoa/index",
+                        "permissionCode": "wxoaconfig:get-config",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.update",
+                                "code": null,
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "wxoaconfig:update-config",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.financial.title",
+                "code": null,
+                "path": "financial",
+                "icon": "i-lucide-circle-dollar-sign",
+                "component": "",
+                "sort": 1000,
+                "isHidden": 0,
+                "type": 1,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.financial.financialCenter",
+                        "code": "financial-center",
+                        "path": "financial-center",
+                        "icon": "",
+                        "component": "/console/financial/financial-center",
+                        "permissionCode": "finance:center",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.financial.accountBalance",
+                        "code": "account-balance",
+                        "path": "account-balance",
+                        "icon": "",
+                        "component": "/console/financial/account-balance",
+                        "permissionCode": "finance:account-log",
+                        "sort": 10,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.permission.title",
+                "code": "system-permission",
+                "path": "system-perms",
+                "icon": "i-lucide-user-lock",
+                "component": "",
+                "sort": 1100,
+                "isHidden": 0,
+                "type": 1,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.permission.permissionList",
+                        "code": "system-permission-list",
+                        "path": "permission/list",
+                        "icon": "",
+                        "component": "/console/permission/list",
+                        "permissionCode": "permission:list",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "system-perms.permission.sync",
+                                "code": "system-permission-sync",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "permission:sync",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "system-perms.permission.cleanup",
+                                "code": "system-permission-cleanup",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "permission:cleanup",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.check",
+                                "code": "system-permission-view",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "permission:info",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.permission.roleList",
+                        "code": "system-role",
+                        "path": "role/list",
+                        "icon": "",
+                        "component": "/console/role/list",
+                        "permissionCode": "role:list",
+                        "sort": 50,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.add",
+                                "code": "system-role-create",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "role:create",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.edit",
+                                "code": "system-role-edit",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "role:update",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.delete",
+                                "code": "system-role-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "role:delete",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "system-perms.role.permissions",
+                                "code": "system-role-permission",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "role:assign-permissions",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.permission.menuList",
+                        "code": "system-menu",
+                        "path": "menu/list",
+                        "icon": "",
+                        "component": "/console/menu/list",
+                        "permissionCode": "menu:list",
+                        "sort": 60,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-common.edit",
+                                "code": "system-menu-edit",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "menu:update",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.add",
+                                "code": "system-menu-create",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "menu:create",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.batchDelete",
+                                "code": "system-menu-batch-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "menu:delete",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            },
+                            {
+                                "name": "console-common.delete",
+                                "code": "system-menu-delete",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "menu:delete",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "console-menu.systemSettings.title",
+                "code": "system-settings",
+                "path": "system",
+                "icon": "i-lucide-settings-2",
+                "component": "",
+                "sort": 1200,
+                "isHidden": 0,
+                "type": 1,
+                "sourceType": 1,
+                "children": [
+                    {
+                        "name": "console-menu.systemSettings.PayConfig",
+                        "code": "system-payConfig-update",
+                        "path": "setPayConfig",
+                        "icon": "",
+                        "component": "/console/system-setting/pay-config/edit",
+                        "permissionCode": "system-payconfig:update",
+                        "sort": 0,
+                        "isHidden": 1,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.systemSettings.PayConfig",
+                        "code": "system-payConfig-list",
+                        "path": "getPayConfig",
+                        "icon": "",
+                        "component": "/console/system-setting/pay-config/index",
+                        "permissionCode": "system-payconfig:list",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1
+                    },
+                    {
+                        "name": "console-menu.systemSettings.siteInfo",
+                        "code": "system-website",
+                        "path": "website",
+                        "icon": "",
+                        "component": "/console/system-setting/website/index",
+                        "permissionCode": "system-website:getConfig",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-system.website.actions.save",
+                                "code": "system-website-save",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "system-website:setConfig",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.systemSettings.agreement",
+                        "code": "system-agreement",
+                        "path": "agreement",
+                        "icon": "",
+                        "component": "/console/system-setting/agreement/index",
+                        "permissionCode": "system-website:getConfig",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-system.website.actions.save",
+                                "code": "system-agreement-save",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "system-website:setConfig",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    },
+                    {
+                        "name": "console-menu.systemSettings.loginConfig",
+                        "code": "system-loginConfig-get",
+                        "path": "loginConfig",
+                        "icon": "",
+                        "component": "/console/system-setting/login-config/index",
+                        "permissionCode": "users:get-login-settings",
+                        "sort": 0,
+                        "isHidden": 0,
+                        "type": 2,
+                        "sourceType": 1,
+                        "children": [
+                            {
+                                "name": "console-system.website.actions.save",
+                                "code": "system-loginConfig-set",
+                                "path": "",
+                                "icon": "",
+                                "component": "",
+                                "permissionCode": "users:set-login-settings",
+                                "sort": 0,
+                                "isHidden": 0,
+                                "type": 3,
+                                "sourceType": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

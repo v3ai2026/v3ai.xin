@@ -1,0 +1,5 @@
+{
+    "extends": "@buildingai/typescript-config/base.json",
+    "include": ["src/**/*.ts"],
+    "exclude": ["src/**/__tests__/**", "dist", "node_modules"]
+}

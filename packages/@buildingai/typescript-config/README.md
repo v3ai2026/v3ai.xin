@@ -1,0 +1,1 @@
+# @buildingai/typescript-config

@@ -1,0 +1,351 @@
+{
+    "backend": {
+        "common": {
+            "name": "名称",
+            "description": "描述",
+            "retrievalMode": "检索模式",
+            "documentCount": "文档数量",
+            "chunkCount": "分段数量",
+            "enabled": "已启用",
+            "disabled": "已禁用"
+        },
+        "menu": {
+            "documents": "文档",
+            "retrieval": "召回测试",
+            "members": "协作成员",
+            "settings": "设置",
+            "segments": "分段",
+            "relatedApplications": "关联应用"
+        },
+        "permission": {
+            "title": "无权限访问",
+            "description": "您没有权限查看此页面，请联系知识库拥有者或返回首页。",
+            "back": "返回首页"
+        },
+        "dataset": {
+            "title": "知识库",
+            "description": "知识库是知识库的核心组成部分，用于存储和管理知识库中的文档。",
+            "searchPlaceholder": "搜索知识库名称或描述",
+            "table": {
+                "progress": "处理进度",
+                "storageSize": "存储空间"
+            },
+            "create": {
+                "title": "创建知识库",
+                "desc": "导入您自己的文本数据或通过文件上传您的文档进行创建知识库"
+            },
+            "allDatasets": "我创建的",
+            "retry": {
+                "title": "重试向量化",
+                "desc": "确定要重试该知识库下所有失败文档的向量化吗？",
+                "success": "重试任务已提交，请稍后刷新查看进度",
+                "failed": "重试失败"
+            },
+            "retrievalMode": "知识库内容检索模式",
+            "retrievalModeDesc": "文本向量进度与状态显示"
+        },
+        "list": {
+            "title": "知识库列表",
+            "searchPlaceholder": "搜索知识库名称或描述",
+            "table": {
+                "progress": "处理进度"
+            },
+            "delete": {
+                "title": "删除知识库",
+                "desc": "确定要删除选中的知识库吗？删除后将无法恢复，包括所有文档和分段数据。"
+            },
+            "viewDocuments": "查看文档"
+        },
+        "documents": {
+            "title": "知识库文档",
+            "description": "知识库文档是知识库的核心组成部分，用于存储和管理知识库中的文档。",
+            "searchPlaceholder": "搜索文档...",
+            "addFile": "添加文件",
+            "error": "个别分段处理失败",
+            "table": {
+                "fileName": "文件名",
+                "fileSize": "文件大小",
+                "fileType": "文件类型",
+                "status": "处理状态",
+                "progress": "处理进度",
+                "characterCount": "字符数",
+                "chunkCount": "分段数",
+                "createdAt": "上传时间"
+            },
+            "delete": {
+                "title": "删除文档",
+                "desc": "确定要删除该文档吗？"
+            },
+            "renameModal": {
+                "title": "重命名文档",
+                "desc": "请输入新的文件名",
+                "placeholder": "请输入文件名",
+                "success": "重命名成功",
+                "failed": "重命名失败"
+            },
+            "viewSegments": "查看分段",
+            "enable": {
+                "title": "启用文档",
+                "desc": "确定要启用该文档吗？",
+                "success": "文档已启用",
+                "failed": "启用失败"
+            },
+            "disable": {
+                "title": "禁用文档",
+                "desc": "确定要禁用该文档吗？",
+                "success": "文档已禁用",
+                "failed": "禁用失败"
+            },
+            "retry": {
+                "title": "重试文档向量化",
+                "desc": "确定要重试该文档下所有失败分段的向量化吗？",
+                "success": "重试任务已提交，请稍后刷新查看进度",
+                "failed": "重试失败"
+            },
+            "retryDocumentDescription": "确定要重试该文档下所有失败分段的向量化吗？",
+            "retryDocumentSuccess": "重试任务已提交，请稍后刷新查看进度",
+            "retryDocumentFailed": "重试失败"
+        },
+        "segments": {
+            "title": "知识库文档分段",
+            "searchPlaceholder": "搜索分段内容...",
+            "table": {
+                "chunkIndex": "分段编号",
+                "contentLength": "内容长度"
+            },
+            "delete": {
+                "title": "删除分段",
+                "desc": "确定要删除该分段吗？"
+            },
+            "batchDelete": {
+                "title": "批量删除分段",
+                "desc": "确定要删除这些分段吗？",
+                "confirmText": "批量删除",
+                "confirmDesc": "确定要删除这些分段吗？此操作不可撤销。",
+                "confirmDesc2": "确定要删除这个分段吗？删除后无法恢复。",
+                "success": "批量删除成功",
+                "failed": "批量删除失败"
+            },
+            "createSegmentModal": {
+                "tip": "请先选择文档",
+                "title": "创建分段",
+                "desc": "输入分段内容",
+                "placeholder": "请输入分段内容",
+                "success": "创建分段成功",
+                "failed": "创建分段失败"
+            },
+            "editSegmentModal": {
+                "title": "编辑分段",
+                "desc": "输入分段内容",
+                "placeholder": "请输入分段内容",
+                "success": "编辑分段成功",
+                "failed": "编辑分段失败"
+            },
+            "chunkDetail": "段落详情",
+            "sourceFile": "来源文件",
+            "createSegment": "新增分段",
+            "rename": "重命名",
+            "segment": "分段",
+            "expandAll": "展开全部",
+            "collapseAll": "折叠全部",
+            "noData": "暂无分段数据"
+        },
+        "dataRecord": {
+            "title": "数据记录",
+            "desc": "全部的知识库的数据记录",
+            "searchPlaceholder": "搜索数据记录"
+        },
+        "retrieval": {
+            "retrievalConfig": "检索配置",
+            "fullText": "全文检索",
+            "fullTextDesc": "索引文档中的所有词汇，允许用户查询任何词汇，并返回包含这些词汇的文本片段",
+            "vector": "向量检索",
+            "vectorDesc": "通过生成查询与文档内容的向量表示，并计算相似度来检索相关文档片段",
+            "hybrid": "混合检索",
+            "hybridDesc": "同时执行全文检索和向量检索，并用重排序策略，从而兼具两者优势",
+            "rerank": "Rerank 模型",
+            "rerankDesc": "重排序模型根据语义相似度优化搜索结果顺序",
+            "topKPlaceholder": "输入 Top K",
+            "scoreThreshold": "Score 阈值",
+            "scoreThresholdPlaceholder": "输入相似度阈值",
+            "weightSetting": "权重设置",
+            "weightSettingDesc": "调整语义与关键词权重，控制排序偏向",
+            "semantic": "语义",
+            "keyword": "关键词",
+            "semanticWeight": "语义权重",
+            "keywordWeight": "关键词权重"
+        },
+        "members": {
+            "title": "协作成员管理",
+            "description": "管理知识库的协作成员，分配角色权限，控制访问范围。",
+            "searchPlaceholder": "搜索用户名...",
+            "table": {
+                "user": "成员",
+                "role": "角色",
+                "createdAt": "加入时间",
+                "lastActiveAt": "最后活跃"
+            },
+            "role": {
+                "owner": "所有者",
+                "manager": "管理者",
+                "editor": "编辑者",
+                "viewer": "查看者"
+            },
+            "self": "自己",
+            "note": "备注",
+            "notePlaceholder": "请输入备注信息...",
+            "transferOwnership": "转移所有权",
+            "updateRole": "更新角色",
+            "removeMember": "移除成员",
+            "exit": "退出",
+            "roleTip": "的角色",
+            "newRole": "新角色",
+            "updateRoleModal": "更新成员角色",
+            "updateRoleSuccess": "更新角色成功",
+            "updateRoleFailed": "更新角色失败",
+            "confirmExit": "确认退出",
+            "confirmRemove": "确认移除",
+            "exitSuccess": "退出成功",
+            "removeSuccess": "移除成功",
+            "removeFailed": "移除失败",
+            "confirmExitContent": "确定要退出这个知识库吗？退出后您将无法访问此知识库。",
+            "confirmRemoveContent": "确定要移除这个协作成员吗？移除后该用户将无法访问此知识库。",
+            "confirmTransferContent": "确定要将知识库所有权转移给 ",
+            "confirmTransferSuccess": "所有权转移成功",
+            "confirmTransferFailed": "所有权转移失败",
+            "confirmTransferContent2": "转移后您将失去所有者权限。",
+            "addMember": "添加成员",
+            "confirmTransfer": "转移所有权",
+            "addModal": {
+                "title": "添加协作成员",
+                "description": "搜索并选择要添加的协作成员，设置角色和备注信息",
+                "searchPlaceholder": "搜索并选择用户...",
+                "emptyState": "暂无用户",
+                "userMatch": "用户匹配",
+                "user": "用户",
+                "selectUserError": "请选择用户",
+                "addMemberFailed": "添加成员失败",
+                "addMemberFailedLog": "添加成员失败:",
+                "addButton": "添加",
+                "noteInputPlaceholder": "备注信息（可选）",
+                "addSuccess": "成功添加 {count} 个成员"
+            }
+        },
+        "test": {
+            "title": "召回测试",
+            "description": "根据给定的查询文本测试知识的召回效果。",
+            "retrievalConfig": "检索配置",
+            "placeholder": "请输入查询内容",
+            "success": "召回测试完成",
+            "failed": "召回测试失败",
+            "test": "测试",
+            "record": "记录",
+            "recallParagraph": "个召回段落",
+            "recallResult": "召回结果",
+            "tip": "请输入查询内容并执行召回测试"
+        },
+        "settings": {
+            "name": "知识库设置",
+            "description": "您可以设置您的知识库名称以及知识库描述，以及向量模型， 检索设置等。",
+            "nameInput": "请输入知识库名称",
+            "descriptionInput": "请输入知识库描述",
+            "retrievalMethod": "检索设置",
+            "embeddingModelInput": "请选择 embeddingModel 模型",
+            "embeddingModelWarning": {
+                "title": "重要提醒",
+                "description": "修改向量模型将导致知识库中的所有文档数据重新进行向量化处理，此过程可能需要较长时间，请谨慎操作。"
+            }
+        },
+
+        "create": {
+            "step": {
+                "one": "选择数据源",
+                "two": "文本分段与清洗",
+                "three": "处理并完成"
+            },
+            "file": {
+                "unsupportedFileType": "不支持的文件类型: {ext}",
+                "fileTooLarge": "文件过大，最大支持 {maxSize}MB",
+                "dragOrSelectFiles": "拖拽文件或文件夹至此，或者",
+                "chooseFile": "选择文件",
+                "supportedTypes": "已支持 {types}",
+                "fileSizeLimit": "每个文件不超过 {maxSize}MB",
+                "comingSoon": "后续支持上传其他文件类型"
+            },
+            "segmentPreview": {
+                "title": "预览",
+                "clickLeftPreviewBlock": "点击左侧的\"预览块\"按钮来查看预览效果"
+            },
+            "createEmpty": "跳过上传文件，创建一个空知识库",
+            "nextStep": "下一步",
+            "previousStep": "上一步",
+            "saveAndCreate": "保存并创建",
+            "goToDetail": "前往详情",
+            "fileList": "文件列表",
+            "uploadTextFile": "上传文本文件",
+            "comingSoon": "即将推出",
+            "selectDataSource": "选择数据源",
+            "selectDataSourceDesc": "您可以选择不同的数据源来创建您的知识库，支持导入已有文本、问答对导入、网页解析。",
+            "name": "知识库名称",
+            "description": "知识库描述",
+            "basicInfo": "基本信息",
+            "basicInfoDesc": "您可以设置您的知识库名称以及知识库描述，这将帮助您有效管理您的知识库。",
+            "dataSource": "数据源",
+            "dataSources": {
+                "text": {
+                    "title": "导入已有文本",
+                    "description": "上传本地电脑的文件，对文本进行训练"
+                },
+                "chat": {
+                    "title": "问答对导入",
+                    "description": "支持问答对导入，对问答对进行训练"
+                },
+                "web": {
+                    "title": "网页解析",
+                    "description": "支持网页解析，对网页内容进行训练"
+                }
+            },
+            "segment": {
+                "general": "通用",
+                "generalDesc": "系统将根据特定的分段标识符将文本分段",
+                "hierarchical": "父子分段",
+                "hierarchicalDesc": "使用父子模式时，子块用于检索，父块用作上下文",
+                "segmentIdentifier": "分段标识符",
+                "segmentIdentifierDesc": "输入 \\n\\n 表示两个换行符，预览时会自动转换为实际换行",
+                "maxSegmentLength": "分段最大长度",
+                "maxSegmentLengthDesc": "分段最大长度",
+                "segmentOverlap": "分段重叠长度",
+                "segmentOverlapDesc": "分段重叠长度",
+                "preprocessingRules": "文本预处理规则",
+                "replaceConsecutiveWhitespace": "替换连续的空格、换行符和制表符",
+                "removeUrlsAndEmails": "移除URL和邮箱",
+                "removeUrlsAndEmailsDesc": "移除URL和邮箱",
+                "parentContext": "父块用作上下文",
+                "paragraph": "段落",
+                "parentContextDesc": "此模式根据分隔符和最大长度将文本分为分段，使用拆分文本作为检索的父块分段标识符",
+                "preview": "预览块",
+                "fullText": "全文",
+                "fullTextDesc": "整个文档作为父块文本并直接检索。请注意，出于性能原因，超过 10000 个标记的文本将被自动截断。",
+                "subSegmentation": "子块用于检索"
+            },
+            "stepThree": {
+                "dataTitle": "🎉文档添加成功",
+                "dataDesc": "已成功添加文档到知识库，你可以在知识库的文档管理页面查看",
+                "createTitle": "🎉创建成功",
+                "createDesc": "已成功创建知识库，你可以在知识库的文档管理页面查看",
+                "documentEmbedding": "文档嵌入中",
+                "documentEmbeddingSuccess": "文档嵌入完成",
+                "no": "无",
+                "default": "默认设置",
+                "returnCount": "返回数量",
+                "segmentMode": "分段模式",
+                "goToDetail": "前往详情"
+            },
+            "stepTwo": {
+                "segmentation": "分段设置",
+                "embeddingModel": "Embedding 模型",
+                "retrievalSettings": "检索设置"
+            }
+        }
+    }
+}

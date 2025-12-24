@@ -1,0 +1,8 @@
+{
+    "extends": "./nestjs.base.json",
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "bundler"
+    },
+    "exclude": ["node_modules", "test", "dist", "build", "**/*spec.ts"]
+}

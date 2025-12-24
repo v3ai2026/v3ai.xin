@@ -1,0 +1,10 @@
+package.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
+dist
+build
+.output
+.turbo
+.nuxt
+.storybook
+node_modules

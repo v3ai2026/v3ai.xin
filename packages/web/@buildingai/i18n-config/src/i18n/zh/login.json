@@ -1,0 +1,117 @@
+{
+    "welcomeBack": "欢迎回来！ 👋",
+    "waitingForYou": "嘿，等你很久啦～快登录看看有什么新变化吧！",
+    "account": "账号",
+    "usernamePlaceholder": "请输入用户名/邮箱",
+    "password": "密码",
+    "passwordPlaceholder": "请输入密码",
+    "forgotPassword": "忘记密码？",
+    "passwordRule": "密码建议为6-25位数字+字母或符号组合",
+
+    "strength": {
+        "empty": "请输入密码",
+        "weak": "密码强度：弱",
+        "medium": "密码强度：中",
+        "strong": "密码强度：强",
+        "met": " - 要求已满足",
+        "notMet": " - 要求未满足"
+    },
+
+    "requirements": {
+        "minLength8": "建议 8 个字符",
+        "number": "建议包含 1 个数字",
+        "lowercase": "建议包含 1 个小写字母",
+        "uppercase": "建议包含 1 个大写字母"
+    },
+
+    "agreement": "已阅读并同意 ",
+    "userAgreement": "用户协议",
+    "and": "和",
+    "privacyPolicy": "隐私政策",
+
+    "register": "注册账号",
+    "loginNow": "立即登录",
+    "orLoginTo": "或",
+    "title": "登录或注册",
+    "subtitle": "您将获得更加智能的回复并能上传文件、图片等内容。",
+    "continueWithAccount": "继续使用账号密码登录",
+    "continueWithWechat": "继续使用微信登录",
+    "bindMobile": "绑定手机号",
+
+    "registerTitle": "账号注册",
+    "registerWelcome": "欢迎成为我们的新成员，探索更多强大功能即刻开始。🚀",
+    "confirmPassword": "确认密码",
+    "confirmPasswordPlaceholder": "请再次输入密码",
+    "backToLogin": "返回登录",
+    "registerNow": "立即注册",
+
+    "validation": {
+        "accountRequired": "请输入账号",
+        "accountMinLength": "账号长度不能少于3个字符",
+        "accountMaxLength": "账号长度不能超过20个字符",
+        "emailRequired": "请输入邮箱",
+        "emailInvalid": "请输入有效的邮箱地址",
+        "passwordRequired": "请输入密码",
+        "passwordMinLength": "密码长度不能少于6个字符",
+        "passwordMaxLength": "密码长度不能超过25个字符",
+        "passwordFormat": "密码必须为数字，字母或符号组合",
+        "confirmPasswordRequired": "请确认密码",
+        "passwordMismatch": "两次输入的密码不一致"
+    },
+
+    "messages": {
+        "agreementRequired": "请先同意隐私协议和服务条款",
+        "agreementTitle": "温馨提示",
+        "agreementModal": {
+            "title": "服务协议及隐私保护",
+            "prefix": "确认即表示你已阅读并同意{appName}的",
+            "confirm": "同意",
+            "cancel": "不同意",
+            "appNameFallback": "本服务"
+        },
+        "registerFailed": "注册失败",
+        "loginFailed": "登录失败"
+    },
+
+    "placeholders": {
+        "enterAccount": "请输入账号",
+        "enterPassword": "请输入密码",
+        "enterPasswordAgain": "请再次输入密码"
+    },
+
+    "forget": {
+        "title": "忘记密码",
+        "subtitle": "设置新密码以继续使用您的账户",
+        "mobile": "手机号",
+        "mobilePlaceholder": "请输入手机号码",
+        "code": "验证码",
+        "codePlaceholder": "请输入验证码",
+        "newPassword": "新密码",
+        "newPasswordPlaceholder": "请输入新密码",
+        "confirmPassword": "确认密码",
+        "confirmPasswordPlaceholder": "请再次输入新密码",
+        "passwordHint": "密码必须为6-25位数字+字母或符号组合",
+        "getCode": "获取验证码",
+        "sending": "正在发送中",
+        "resend": "重新发送",
+        "backToLogin": "返回登录",
+        "confirmChange": "确认修改",
+        "validation": {
+            "mobileRequired": "请输入手机号",
+            "mobileInvalid": "请输入正确的手机号码",
+            "codeRequired": "请输入验证码",
+            "passwordRequired": "请输入新密码",
+            "passwordMinLength": "密码长度不能少于6个字符",
+            "passwordMaxLength": "密码长度不能超过25个字符",
+            "passwordFormat": "密码必须为数字，字母或符号组合",
+            "confirmPasswordRequired": "请确认密码",
+            "passwordMismatch": "两次输入的密码不一致"
+        },
+        "messages": {
+            "sendSuccess": "验证码发送成功，请注意查收",
+            "sendSuccessTitle": "发送成功",
+            "sendFailed": "验证码发送失败，请稍后重试",
+            "sendFailedTitle": "发送失败"
+        }
+    }
+}

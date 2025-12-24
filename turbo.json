@@ -1,0 +1,84 @@
+{
+    "$schema": "https://turborepo.com/schema.json",
+    "ui": "tui",
+    "concurrency": "20",
+    "globalEnv": [
+        "NODE_ENV",
+        "APP_NAME",
+        "SERVER_PORT",
+        "SERVER_CORS_ENABLED",
+        "SERVER_CORS_ORIGIN",
+        "JWT_SECRET",
+        "JWT_EXPIRES_IN",
+        "DB_TYPE",
+        "DB_HOST",
+        "DB_PORT",
+        "DB_USERNAME",
+        "DB_PASSWORD",
+        "DB_DATABASE",
+        "DB_SYNCHRONIZE",
+        "DB_DEV_SYNCHRONIZE",
+        "DB_LOGGING",
+        "REDIS_HOST",
+        "REDIS_PORT",
+        "REDIS_USERNAME",
+        "REDIS_PASSWORD",
+        "REDIS_DB",
+        "REDIS_TTL",
+        "LOG_LEVELS",
+        "LOG_TO_FILE",
+        "EXTENSION_API_URL",
+        "VITE_DEVELOP_APP_BASE_URL",
+        "VITE_PRODUCTION_APP_BASE_URL",
+        "VITE_APP_WEB_API_PREFIX",
+        "VITE_APP_CONSOLE_API_PREFIX",
+        "PM2_HOME",
+        "PM2_JSON_PROCESSING",
+        "PM2_CLI",
+        "PM2_APP_NAME",
+        "PM2_INSTANCES",
+        "PM2_EXEC_MODE",
+        "PM2_MAX_MEMORY",
+        "PM2_WATCH",
+        "PM2_LOG_DIR",
+        "PM2_AUTORESTART",
+        "PM2_LOG_DATE_FORMAT",
+        "SERVER_SHOW_DETAILED_ERRORS",
+        "LOG_DATABASE_SCHEMA",
+        "SERVER_IS_DEMO_ENV",
+        "SERVER_DEMO_POST_WHITELIST",
+        "CACHE_TTL",
+        "CACHE_MAX_ITEMS",
+        "LOG_WRITE_LEVELS",
+        "LOG_CLEAN_INTERVAL",
+        "REDIS_MAX_RECONNECT_ATTEMPTS",
+        "REDIS_RECONNECT_DELAY",
+        "NODE_APP_INSTANCE",
+        "pm_id",
+        "APP_DOMAIN",
+        "EXTENSION_IDENTIFIER"
+    ],
+    "tasks": {
+        "build": {
+            "dependsOn": ["^build"],
+            "inputs": ["$TURBO_DEFAULT$", ".env*"],
+            "outputs": ["dist/**", "build/**", ".output/**"]
+        },
+        "lint": {
+            "dependsOn": ["^lint"]
+        },
+        "lint:fix": {
+            "dependsOn": ["^lint:fix"]
+        },
+        "check-types": {
+            "dependsOn": ["^check-types"]
+        },
+        "clean": {
+            "dependsOn": ["^clean"]
+        },
+        "dev": {
+            "cache": false,
+            "persistent": true
+        }
+    }
+}

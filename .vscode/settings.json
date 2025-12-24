@@ -1,0 +1,129 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "vue"
+    ],
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ],
+    // Enable file nesting
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "nuxt.config.*": "volar.config.*, *.env, .env.*, postcss.config.*, auto-imports.*, components.*",
+        "vite.config.*": "volar.config.*, *.env, .env.*, postcss.config.*, auto-imports.*, components.*",
+        "package.json": "pnpm-*.yaml, yarn.*, package-*.json"
+    },
+    "[plaintext]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[dockercompose]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "cSpell.words": [
+        "analyse",
+        "BDSJHM",
+        "BGSJHM",
+        "Blockquotes",
+        "buildingai",
+        "callsites",
+        "clsx",
+        "consoleapi",
+        "defu",
+        "dmermaid",
+        "dompurify",
+        "echarts",
+        "esbuild",
+        "fancyapps",
+        "forgeround",
+        "heroicons",
+        "iconify",
+        "ILIKE",
+        "intlify",
+        "katex",
+        "linkify",
+        "lucide",
+        "Micropage",
+        "nuxt",
+        "nuxtjs",
+        "ofetch",
+        "oklch",
+        "Paginaction",
+        "panzoom",
+        "pinia",
+        "prerender",
+        "qrcode",
+        "Regisrer",
+        "reka",
+        "rerank",
+        "rgba",
+        "Roboto",
+        "Shiki",
+        "shikijs",
+        "Slideover",
+        "svgs",
+        "tabler",
+        "tiptap",
+        "Unhead",
+        "vaul",
+        "vite",
+        "vuedraggable",
+        "vueuse",
+        "webapi",
+        "webinfo",
+        "WECHAT",
+        "WEIXIN",
+        "YZMDL",
+        "YZMZC",
+        "ZHDLMM"
+    ],
+    "[postcss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "i18n-ally.localesPaths": [
+        "packages/web/buildingai-ui/app/i18n",
+        "packages/web/@buildingai/i18n-config/src/i18n",
+        "extensions/*/src/web/i18n",
+    ],
+    "i18n-ally.enabledParsers": [
+        "json"
+    ],
+    "i18n-ally.sourceLanguage": "zh",
+    "i18n-ally.langs": [
+        "zh",
+        "en",
+        "jp"
+    ],
+    "i18n-ally.keystyle": "nested",
+    "i18n-ally.sortKeys": true,
+    "i18n-ally.namespace": true,
+    "i18n-ally.displayLanguage": "zh",
+    "i18n-ally.enabledFrameworks": [
+        "vue"
+    ],
+}
