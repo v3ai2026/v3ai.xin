@@ -53,6 +53,18 @@ docker compose up -d
 
 其他部署方式请参阅我们的 [《部署文档》](https://www.buildingai.cc/docs/introduction/install)
 
+## GitHub Pages 自动部署
+
+本仓库已配置自动部署到 GitHub Pages。当你推送代码到 `main` 或 `master` 分支时，GitHub Actions 会自动构建并部署项目。
+
+**配置说明：**
+1. 在仓库 `Settings` > `Pages` 中启用 GitHub Pages
+2. 将部署源设置为 `GitHub Actions`
+3. 推送代码到 `main` 或 `master` 分支即可触发自动部署
+4. 详细说明请查看 [GITHUB_PAGES_DEPLOYMENT.md](./GITHUB_PAGES_DEPLOYMENT.md)
+
+**无需配置密钥！** 工作流使用 GitHub 内置权限。
+
 ## 主要功能
 
 - **AI对话**： 基于 LLM 模型进行对话、文本生成，支持多模态模型调用
