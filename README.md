@@ -59,15 +59,18 @@ After the project has fully started, open your browser and visit
 For other deployment methods, see our
 [Deployment Guide](https://www.buildingai.cc/docs/introduction/install).
 
-## Automatic Deployment to Vercel
+## Automatic Deployment to GitHub Pages
 
-This repository is configured for automatic deployment to Vercel. When you push code to the `main` or
+This repository is configured for automatic deployment to GitHub Pages. When you push code to the `main` or
 `master` branch, GitHub Actions will automatically build and deploy the project.
 
 **Setup Instructions:**
-1. See [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) for detailed configuration steps
-2. Configure required GitHub Secrets: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID`
+1. Enable GitHub Pages in repository `Settings` > `Pages`
+2. Set deployment source to `GitHub Actions`
 3. Push to `main` or `master` branch to trigger deployment
+4. See [GITHUB_PAGES_DEPLOYMENT.md](./GITHUB_PAGES_DEPLOYMENT.md) for detailed information
+
+**No secrets required!** The workflow uses GitHub's built-in permissions.
 
 ## Key Features
 
